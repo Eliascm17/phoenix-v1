@@ -5,3 +5,4 @@ target
 **/.crates
 yarn.lock
 /test-ledger
+assets.json

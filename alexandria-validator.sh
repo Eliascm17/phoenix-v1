@@ -17,8 +17,14 @@ jitosol_sol_market="2t9TBYyUyovhHQq434uAiBxW6DmJCg7w4xdDoSK6LRjP"
 jitosol_sol_base_vault="51LAUnnqk8PTPribSTRb5rmF867dz5mEQbpxfk13Nu1C"
 jitosol_sol_quote_vault="AzPnm9Vm4TZxYG2XEqspncfNzv9dxG9qKy2d4yqToVUi"
 
-# URL for the Solana network you want to use
+# asset token accounts
+account="3qvfBxBSpSZrBgLAv2apdYgCtHZeuDCZiVhv5Cj2Lzzx"
+msol_token_account="H5iYda9J8p1Wbo24tgxn82U4Uzea3wHA88vtPqgHhmaR"
+usdc_token_account="J3mvdwDZb5g8NADomwoou84xQH2WxcsozFiYihVLh9oU"
+jitosol_token_account="HUvH3bHqJY3o418WBmus2ezQ89zJWJSkJCR8uHmLDhE6"
+
+# cluster to clone from
 network_url="mainnet-beta"
 
 # Run the solana-test-validator command with the specified options
-solana-test-validator --bpf-program target/deploy/phoenix-keypair.json target/deploy/phoenix.so --clone "$phoenix_program" --clone "$sol_usdc_market" --clone "$sol_usdc_base_vault" --clone "$sol_usdc_quote_vault" --clone "$msol_sol_market" --clone "$msol_sol_base_vault" --clone "$msol_sol_quote_vault" --clone "$jitosol_sol_market" --clone "$jitosol_sol_base_vault" --clone "$jitosol_sol_quote_vault" --url "$network_url" --reset
+solana-test-validator --bpf-program target/deploy/phoenix-keypair.json target/deploy/phoenix.so --clone "$phoenix_program" --clone "$sol_usdc_market" --clone "$sol_usdc_base_vault" --clone "$sol_usdc_quote_vault" --clone "$msol_sol_market" --clone "$msol_sol_base_vault" --clone "$msol_sol_quote_vault" --clone "$jitosol_sol_market" --clone "$jitosol_sol_base_vault" --clone "$jitosol_sol_quote_vault" --clone "$msol_token_account" --clone "$usdc_token_account" --clone "$jitosol_token_account" --clone "$account" --url "$network_url" --reset
