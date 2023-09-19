@@ -4,3 +4,4 @@ target
 **/node_modules
 **/.crates
 yarn.lock
+/test-ledger
